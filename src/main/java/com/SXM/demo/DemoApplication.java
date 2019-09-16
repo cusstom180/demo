@@ -1,7 +1,6 @@
 package com.SXM.demo;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -15,6 +14,7 @@ public class DemoApplication {
 		context.registerShutdownHook();
 		Shape shape = (Shape) context.getBean("circle");
 		shape.draw();
+		//System.out.println(context.getMessage("greeting", null, "Defualt greeting", null));
 	}
 
 }
